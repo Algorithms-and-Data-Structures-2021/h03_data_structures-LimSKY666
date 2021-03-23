@@ -149,46 +149,6 @@
       "comparison": "included",
       "timeout": 5,
       "points": 1
-    },
-    {
-      "name": "IO TestCase: LinkedStack",
-      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
-      "run": "cd build/io_tests && ./stack_io_test",
-      "input": "LINKED\r\nCONSTRUCT\r\nPRINT\r\nPUSH BMW\r\nPRINT\r\nPUSH BUGATTI\r\nPRINT\r\nPOP\r\nPRINT\r\nPOP\r\nPRINT\r\nPUSH BMW\r\nPUSH FERRARI\r\nPUSH BMW\r\nPRINT\r\nCLEAR\r\nPRINT",
-      "output": "size: 0\r\n\r\nsize: 1\r\n[TOP] BMW\r\n\r\nsize: 2\r\n[TOP] BUGATTI\r\nBMW\r\n\r\nsize: 1\r\n[TOP] BMW\r\n\r\nsize: 0\r\n\r\nsize: 3\r\n[TOP] BMW\r\nFERRARI\r\nBMW\r\n\r\nsize: 0\r\n",
-      "comparison": "included",
-      "timeout": 5,
-      "points": 1
-    },
-    {
-      "name": "IO TestCase: ArrayStack",
-      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
-      "run": "cd build/io_tests && ./stack_io_test",
-      "input": "CONSTRUCT\r\nPRINT\r\nPUSH BMW\r\nPRINT\r\nPUSH BUGATTI\r\nPRINT\r\nPOP\r\nPRINT\r\nPOP\r\nPRINT\r\nPUSH BMW\r\nPUSH FERRARI\r\nPUSH BMW\r\nPRINT\r\nCLEAR\r\nPRINT",
-      "output": "size: 0\r\n\r\nsize: 1\r\n[TOP] BMW\r\n\r\nsize: 2\r\n[TOP] BUGATTI\r\nBMW\r\n\r\nsize: 1\r\n[TOP] BMW\r\n\r\nsize: 0\r\n\r\nsize: 3\r\n[TOP] BMW\r\nFERRARI\r\nBMW\r\n\r\nsize: 0",
-      "comparison": "included",
-      "timeout": 5,
-      "points": 1
-    },
-    {
-      "name": "IO TestCase: LinkedQueue",
-      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
-      "run": "cd build/io_tests && ./queue_io_test",
-      "input": "CONSTRUCT\r\nPRINT\r\nENQUEUE BMW\r\nPRINT\r\nENQUEUE FERRARI\r\nPRINT\r\nDEQUEUE\r\nPRINT\r\nDEQUEUE\r\nPRINT\r\nENQUEUE MERCEDES\r\nPRINT\r\nCLEAR\r\nPRINT",
-      "output": "size: 0\r\n\r\nsize: 1\r\n[FRONT] [BACK] BMW\r\n\r\nsize: 2\r\n[FRONT] BMW\r\n[BACK] FERRARI\r\n\r\nsize: 1\r\n[FRONT] [BACK] FERRARI\r\n\r\nsize: 0\r\n\r\nsize: 1\r\n[FRONT] [BACK] MERCEDES\r\n\r\nsize: 0",
-      "comparison": "included",
-      "timeout": 5,
-      "points": 1
-    },
-    {
-      "name": "IO TestCase: LinkedDequeue",
-      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
-      "run": "cd build/io_tests && ./deque_io_test",
-      "input": "CONSTRUCT\r\nPRINT\r\nENQUEUE BMW\r\nENQUEUE FERRARI\r\nPRINT\r\nENQUEUE_FRONT MASERATI\r\nPRINT\r\nENQUEUE MERCEDES\r\nPRINT\r\nDEQUEUE\r\nPRINT\r\nDEQUEUE_BACK\r\nPRINT\r\nCLEAR\r\nPRINT\r\nENQUEUE BMW\r\nENQUEUE MERCEDES\r\nPRINT\r\nDEQUEUE_BACK\r\nPRINT\r\nDEQUEUE\r\nPRINT\r\nENQUEUE_FRONT MERCEDES\r\nPRINT\r\nDEQUEUE_BACK\r\nPRINT",
-      "output": "size: 0\r\n\r\nsize: 2\r\n[FRONT] BMW\r\n[BACK] FERRARI\r\n\r\nsize: 3\r\n[FRONT] MASERATI\r\nBMW\r\n[BACK] FERRARI\r\n\r\nsize: 4\r\n[FRONT] MASERATI\r\nBMW\r\nFERRARI\r\n[BACK] MERCEDES\r\n\r\nsize: 3\r\n[FRONT] BMW\r\nFERRARI\r\n[BACK] MERCEDES\r\n\r\nsize: 2\r\n[FRONT] BMW\r\n[BACK] FERRARI\r\n\r\nsize: 0\r\n\r\nsize: 2\r\n[FRONT] BMW\r\n[BACK] MERCEDES\r\n\r\nsize: 1\r\n[FRONT] [BACK] BMW\r\n\r\nsize: 0\r\n\r\nsize: 1\r\n[FRONT] [BACK] MERCEDES\r\n\r\nsize: 0",
-      "comparison": "included",
-      "timeout": 5,
-      "points": 1
     }
   ]
 }
