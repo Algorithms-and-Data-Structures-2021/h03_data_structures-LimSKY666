@@ -38,15 +38,16 @@ void LinkedDequeue::Dequeue() {
   if (size_ == 0) {
     throw std::logic_error("cannot not dequeue from empty queue");
   }
-    if (size_ == 1) {
+    if (size_ == 1){
+        delete front_;
         front_ = nullptr;
-        back_ = front_;
+        back_ = nullptr;
     }
-    if (size_ > 1) {
-        DoublyNode *next_node = front_->next;
-        front_ = next_node;
-        delete front_ -> previous;
-        front_ -> previous = nullptr;
+    else {
+        auto node = front_;
+        front_ = front_->next;
+        front_->previous = nullptr;
+        delete node;
     }
     size_--;
 }
